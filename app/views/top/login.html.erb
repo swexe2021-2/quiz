@@ -1,0 +1,16 @@
+<%= flash[:notice] %>
+
+<%= form_tag top_login_path, method: :post do %>
+  <%= label_tag :uid, 'uid : ' %> 
+  <%= text_field_tag :uid %> 
+  <%= label_tag :pass, 'pass : ' %> 
+  <%= password_field_tag :pass %> 
+  <%= submit_tag 'ログイン' %>
+<% end %>
+
+<p>
+    <%= link_to '新規登録', new_user_path %>
+</p>
+<p>
+    <%= link_to 'メイン', index_user_path %>
+</p>
