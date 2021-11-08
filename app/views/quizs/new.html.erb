@@ -1,11 +1,11 @@
 <%= form_for @quiz, url: {action: :create} do |f| %>
   <%= f.label :title, 'タイトル' %> 
-  <%= f.text_field :title %>
+  <%= f.text_field :title %><br>
   <%= f.label :question, '問題' %> 
-  <%= f.text_field :question %>
+  <%= f.text_field :question %><br>
   <%= f.label :answer, '答え' %> 
-  <%= f.text_field :answer %>
+  <%= f.text_field :answer %><br>
   <%= f.label :comment, '解説' %> 
-  <%= f.text_field :commet %>
+  <%= f.text_field :comment %>
   <%= f.submit '投稿する' %>
 <% end %>

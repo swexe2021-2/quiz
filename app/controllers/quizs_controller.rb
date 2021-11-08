@@ -8,11 +8,11 @@ class QuizsController < ApplicationController
   end
 
   def create
-    @quiz = Question.new(title: params[:quiz][:title],
-    question: params[:quiz][:question],
-    #img: params[:quiz][:img],
-    answer: params[:quiz][:answer],
-    comment: params[:quiz][:comment]
+    @quiz = Question.new(title: params[:question][:title],
+    question: params[:question][:question],
+    #img: params[:question][:img],
+    answer: params[:question][:answer],
+    comment: params[:question][:comment]
     )
     if @quiz.save
       redirect_to '/'
@@ -25,10 +25,11 @@ class QuizsController < ApplicationController
     @quiz = Question.find(params[:id])
   end
   
-  def delete
+  def destroy
     quiz = Question.find(params[:id])
     quiz.destroy
-    redirect_to '/'
+    flash[:notice] = "ツイートを削除しました"
+    redirect_to quizs_path
   end
   
 end

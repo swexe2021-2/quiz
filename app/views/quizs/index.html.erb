@@ -4,10 +4,11 @@
     <%= e.question %>
     <%= e.answer%>
     <%= e.comment%>
+    <%= link_to '削除', quiz_path(e), method: :delete %>
   </p>
 <% end %>
 
-テスト
+<%= link_to '新規投稿', new_quiz_path %>
 <p>
 <% if session[:login_uid] %>
   <%= link_to 'ログアウト', top_logout_path %>
