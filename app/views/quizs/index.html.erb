@@ -5,6 +5,9 @@
   <%= link_to 'ログイン', top_main_path %>
 <% end %>
 </p>
+
+<%= flash[:notice] %>
+
 <br>
 <p>
   <%= link_to '新規投稿', new_quiz_path %>

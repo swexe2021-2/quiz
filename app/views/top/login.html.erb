@@ -1,13 +1,17 @@
 <%= flash[:notice] %>
 
 <%= form_tag top_login_path, method: :post do %>
-  <%= label_tag :uid, 'uid : ' %> 
-  <%= text_field_tag :uid %> 
-  <br>
-  <%= label_tag :pass, 'pass : ' %> 
-  <%= password_field_tag :pass %> 
-  <br>
-  <%= submit_tag 'ログイン' %>
+  <p>
+      <%= label_tag :uid, 'uid : ' %> 
+      <%= text_field_tag :uid %> 
+  </p>
+  <p>
+      <%= label_tag :pass, 'pass : ' %> 
+      <%= password_field_tag :pass %> 
+  </p>
+  <p>
+      <%= submit_tag 'ログイン' %>
+  </p>
 <% end %>
 
 <p>
