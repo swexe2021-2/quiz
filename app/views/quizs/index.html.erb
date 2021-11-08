@@ -8,3 +8,10 @@
 <% end %>
 
 テスト
+<p>
+<% if session[:login_uid] %>
+  <%= link_to 'ログアウト', top_logout_path %>
+<% else %>
+  <%= link_to 'ログイン', top_main_path %>
+<% end %>
+</p>

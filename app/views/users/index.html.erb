@@ -1,9 +1,9 @@
 <%= flash[:notice] %>
-<% @users.each do |u| %>
+<% @users.each do |e| %>
   <p>
-    <%= u.uid %>
-    <%= u.pass %>
-    <%= link_to '削除', users_path(u), method: :delete %>
+    <%= e.uid %>
+    <%= e.pass %>
+    <%= link_to '削除', users_path(e), method: :delete %>
     </p>
 <% end %>
 
@@ -11,5 +11,8 @@
   <%= link_to '新規登録', new_user_path %>
 </p>
 <p>
-  <%= link_to 'ログイン', login_top_path %>
+  <%= link_to 'ログイン', top_login_path %>
+</p>
+<p>
+  <%= link_to '戻る', :back %>
 </p>
