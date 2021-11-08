@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :users
-  resources :questions
+  resources :quizs
   get 'user/main'
   post 'user/login'
   get 'user/logout'
-  root 'users#index'
+  root 'quizs#index'
 end
