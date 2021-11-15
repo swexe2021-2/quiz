@@ -11,9 +11,40 @@
 
 <%= link_to '新規投稿', new_quiz_path %>
 <p>
+<p class = "login">
 <% if session[:login_uid] %>
   <%= link_to 'ログアウト', top_logout_path %>
 <% else %>
   <%= link_to 'ログイン', top_main_path %>
 <% end %>
 </p>
+
+<%= flash[:notice] %>
+
+<br>
+<p>
+  <%= link_to '新規投稿', new_quiz_path %>
+</p>
+
+
+<% @quizs.each do |e| %>
+
+  <p class = "quiz-block">
+
+    <%= "タイトル" %>
+    <%= e.title %><br>
+
+    <%= "問題文" %>
+    <%= e.question %><br>
+
+    <%= "答え" %>
+    <%= e.answer%><br>
+
+    <%= "コメント" %>
+    <%= e.comment%><br>
+
+    <%= link_to '削除', quiz_path(e), method: :delete %>
+  </p>
+<% end %>
+
+
