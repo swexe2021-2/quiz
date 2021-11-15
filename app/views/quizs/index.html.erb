@@ -10,10 +10,11 @@
 <%= flash[:notice] %>
 
 <br>
+<% if session[:login_uid] %>
 <p>
   <%= link_to '新規投稿', new_quiz_path %>
 </p>
-
+<% end %>
 
 <% @quizs.each do |e| %>
 
@@ -30,8 +31,12 @@
 
     <%= "コメント" %>
     <%= e.comment%><br>
-
-    <%= link_to '削除', quiz_path(e), method: :delete %>
+    
+    <% if session[:login_uid] %>
+        <%= link_to '削除', quiz_path(e), method: :delete %>
+    <% end %>
+    
+    
   </p>
 <% end %>
 
