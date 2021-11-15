@@ -8,9 +8,10 @@ class QuizsController < ApplicationController
   end
 
   def create
+    file = params[:question][:file].read
     @quiz = Question.new(title: params[:question][:title],
     question: params[:question][:question],
-    #img: params[:question][:img],
+    img: file,
     answer: params[:question][:answer],
     comment: params[:question][:comment]
     )
@@ -22,12 +23,18 @@ class QuizsController < ApplicationController
     end
   end
   
+  def get_image
+    image = Question.find(params[:id])
+    send_data image.img, disposition: :inline, type: 'image/png'
+  end
+  
   def show
     @quiz = Question.find(params[:id])
   end
   
   def answer
     flash[:notice] = "正解です"
+    @quiz = Question.find(params[:id])
   end
   
   def destroy
