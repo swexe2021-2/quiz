@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'top/main'
   post 'top/login'
   get 'top/logout'
+  get 'get_image/:id', to: 'quizs#get_image'
   post 'quizs/answer'
   root 'quizs#index'
 end
