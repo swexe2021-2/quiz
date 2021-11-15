@@ -1,16 +1,3 @@
-<% @quizs.each do |e| %>
-  <p>
-    <%= image_tag "/get_image/#{e.id}" %><br>
-    <%= e.title %>
-    <%= e.question %>
-    <%= e.answer%>
-    <%= e.comment%>
-    <%= link_to '削除', quiz_path(e), method: :delete %>
-    <%= link_to '表示', quiz_path(e) %>
-  </p>
-<% end %>
-
-
 <p class = "login">
 <% if session[:login_uid] %>
   <%= link_to 'ログアウト', top_logout_path %>
@@ -51,10 +38,8 @@
         <%= link_to '削除', quiz_path(e), method: :delete %>
     <% end %>
     
-    
-
-    <%= link_to '削除', quiz_path(e), method: :delete %>
     <%= link_to '表示', quiz_path(e) %>
+    
   </p>
 <% end %>
 
