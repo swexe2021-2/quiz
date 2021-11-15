@@ -15,6 +15,7 @@ class QuizsController < ApplicationController
     comment: params[:question][:comment]
     )
     if @quiz.save
+      flash[:notice] = "投稿しました"
       redirect_to '/'
     else
       render 'new'
@@ -23,6 +24,10 @@ class QuizsController < ApplicationController
   
   def show
     @quiz = Question.find(params[:id])
+  end
+  
+  def answer
+    flash[:notice] = "正解です"
   end
   
   def destroy
