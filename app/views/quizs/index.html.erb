@@ -1,29 +1,33 @@
 <p class = "login">
 <% if session[:login_uid] %>
-  <%= link_to 'ログアウト', top_logout_path %>
+  <%= link_to 'ログアウト', top_logout_path, class:"button" %>
 <% else %>
-  <%= link_to 'ログイン', top_main_path %>
+  <%= link_to 'ログイン', top_main_path, class:"button" %>
 <% end %>
 </p>
+<br>
 
 <%= flash[:notice] %>
 
 <br>
 <% if session[:login_uid] %>
 <p>
-  <%= link_to '新規投稿', new_quiz_path %>
+  <%= link_to '新規投稿', new_quiz_path, class:"button" %>
 </p>
 <% end %>
 
 <% @quizs.each do |e| %>
 
-  <p class = "quiz-block">
 
+
+
+  <p class = "quiz-block">
+    
     <%= "タイトル" %>
     <%= e.title %><br>
     
-    <%= "画像" %>
-    <%= image_tag "/get_image/#{e.id}" %><br>
+    <%= "画像" %><br>
+    <%= image_tag "/get_image/#{e.id}", class:"i" %><br>
 
     <%= "問題文" %>
     <%= e.question %><br>
@@ -34,11 +38,12 @@
     <%= "コメント" %>
     <%= e.comment%><br>
     
+    <br>
     <% if session[:login_uid] %>
-        <%= link_to '削除', quiz_path(e), method: :delete %>
+        <%= link_to '削除', quiz_path(e), method: :delete, class:"button-1" %>
     <% end %>
     
-    <%= link_to '表示', quiz_path(e) %>
+    <%= link_to '表示', quiz_path(e), class:"button-1" %>
     
   </p>
 <% end %>

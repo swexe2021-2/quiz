@@ -10,13 +10,12 @@
       <%= password_field_tag :pass %> 
   </p>
   <p>
-      <%= submit_tag 'ログイン' %>
+      <%= submit_tag 'ログイン', class:"button" %>
   </p>
 <% end %>
 
-<p>
-    <%= link_to '新規登録', new_user_path %>
-</p>
-<p>
-    <%= link_to '戻る', :back %>
-</p>
+<br>
+    <%= link_to '新規登録', new_user_path, class:"button" %>
+
+    <%= link_to '戻る', :back, class:"button" %>
+
