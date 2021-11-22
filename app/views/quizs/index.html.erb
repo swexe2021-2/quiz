@@ -1,3 +1,9 @@
+<%= image_tag 'logo.png', class:"logo" %>
+<%= image_tag '1.png', class:"title" %>
+<%= image_tag '2.png', class:"title" %>
+<%= image_tag '3.png', class:"title" %>
+<%= image_tag '4.png', class:"title" %>
+
 <p class = "login">
 <% if session[:login_uid] %>
   <%= link_to 'ログアウト', top_logout_path, class:"button" %>
@@ -5,9 +11,6 @@
   <%= link_to 'ログイン', top_main_path, class:"button" %>
 <% end %>
 </p>
-<br>
-
-<%= flash[:notice] %>
 
 <br>
 <% if session[:login_uid] %>

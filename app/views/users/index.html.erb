@@ -1,7 +1,7 @@
 <%= flash[:notice] %>
 
 <p class = "login">
-  <%= link_to 'ログイン', top_main_path %>
+  <%= link_to 'ログイン', top_main_path, class:"button"  %>
 </p>
 
 <% @users.each do |e| %>
@@ -9,12 +9,12 @@
     <%= "uid : " %>
     <%= e.uid %>
 
-    <%= link_to '削除', user_path(e), method: :delete %>
+    <%= link_to '削除', user_path(e), method: :delete, class:"button"  %>
 
    
   </p>
 <% end %>
 
 <p>
-  <%= link_to '新規登録', new_user_path %>
+  <%= link_to '新規登録', new_user_path, class:"button"  %>
 </p>
