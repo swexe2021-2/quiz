@@ -1,8 +1,8 @@
 <%= image_tag 'logo.png', class:"logo" %>
-<%= image_tag '1.png', class:"title" %>
-<%= image_tag '2.png', class:"title" %>
-<%= image_tag '3.png', class:"title" %>
-<%= image_tag '4.png', class:"title" %>
+<%= image_tag '1.png', class:"Btitle" %>
+<%= image_tag '2.png', class:"Btitle" %>
+<%= image_tag '3.png', class:"Btitle" %>
+<%= image_tag '4.png', class:"Btitle" %>
 
 <p class = "login">
 <% if session[:login_uid] %>
@@ -26,8 +26,11 @@
 
   <p class = "quiz-block">
     
+  <font size="5px">
     <%= "タイトル" %>
-    <%= e.title %><br>
+    <%= e.title %>
+  </font>
+  <br>
     
     <%= "画像" %><br>
     <%= image_tag "/get_image/#{e.id}", class:"i" %><br>
