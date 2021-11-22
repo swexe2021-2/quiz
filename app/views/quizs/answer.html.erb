@@ -1,3 +1,14 @@
+<P><strong>
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% end %>
+</strong></P>
+
+<p>
+  回答
+  <%= @ans %>
+</p>
+
 <p>
   <strong>タイトル</strong>
   <%= @quiz.title %>

@@ -37,8 +37,13 @@ class QuizsController < ApplicationController
   end
   
   def answer
-    flash[:notice] = "正解です"
     @quiz = Question.find(params[:id])
+    @ans = params[:pans]
+    if @ans == @quiz.answer
+      flash[:notice] = "正解です"
+    else
+      flash[:notice] = "不正解です"
+    end
   end
   
   def destroy
