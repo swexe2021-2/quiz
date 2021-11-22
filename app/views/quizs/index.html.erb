@@ -1,17 +1,3 @@
-<% @quizs.each do |e| %>
-  <p>
-    <%= image_tag "/get_image/#{e.id}" %><br>
-    <%= e.title %>
-    <%= e.question %>
-    <%= e.answer%>
-    <%= e.comment%>
-    <%= link_to '削除', quiz_path(e), method: :delete %>
-    <%= link_to '表示', quiz_path(e) %>
-  </p>
-<% end %>
-
-<%= link_to '新規投稿', new_quiz_path %>
-<p>
 <p class = "login">
 <% if session[:login_uid] %>
   <%= link_to 'ログアウト', top_logout_path %>
@@ -23,10 +9,11 @@
 <%= flash[:notice] %>
 
 <br>
+<% if session[:login_uid] %>
 <p>
   <%= link_to '新規投稿', new_quiz_path %>
 </p>
-
+<% end %>
 
 <% @quizs.each do |e| %>
 
@@ -46,9 +33,13 @@
 
     <%= "コメント" %>
     <%= e.comment%><br>
-
-    <%= link_to '削除', quiz_path(e), method: :delete %>
+    
+    <% if session[:login_uid] %>
+        <%= link_to '削除', quiz_path(e), method: :delete %>
+    <% end %>
+    
     <%= link_to '表示', quiz_path(e) %>
+    
   </p>
 <% end %>
 

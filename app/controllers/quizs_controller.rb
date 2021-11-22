@@ -8,7 +8,11 @@ class QuizsController < ApplicationController
   end
 
   def create
-    file = params[:question][:file].read
+    if params[:question][:file] == nil
+      file = []
+    else
+      file = params[:question][:file].read
+    end
     @quiz = Question.new(title: params[:question][:title],
     question: params[:question][:question],
     img: file,
