@@ -1,6 +1,7 @@
 .body {
-    width: 30%;
-    margin-left: 30%;
+    width: 40%;
+    margin-left: 27%;
+    background-color: #fbfaf5;
 }
 
 .login {
@@ -11,7 +12,100 @@
     float: right;
 }
 
-.quiz-block{
+/*.quiz-block{
     border: solid 0.5px #afb3b5;
-    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding-right: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}*/
+
+/*問題文～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
+
+.quiz-block {
+    position: relative;
+    margin: 2em auto;
+    padding-right: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    width: 90%; /* ボックス幅 */
+    background-color: #5d794a; /* ボックス背景色 */
+    color: #fff; /* 文章色 */
+    border: 8px solid #b2771f; /* 枠線 */
+    border-radius: 3px; /* 角の丸み */
+    box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
 }
+
+.quiz-block::before,
+.quiz-block::after {
+ position: absolute;
+ content: '';
+ bottom: 0;
+} 
+
+
+
+
+
+/*ボタンー～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
+
+
+.button {
+    list-style-type: none;
+    margin :0;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #abced8;
+    color:  #000;
+    border-radius: 100vh;
+    width: 120px;
+    text-decoration: none;
+}
+
+.button-1 {
+    list-style-type: none;
+    margin :0;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #f3f3f3;
+    color:  #000;
+    border-radius: 100vh;
+    width: 120px;
+    text-decoration: none;
+}
+
+.button:hover { /*ボタンの色　マウスが当たった時*/
+    list-style-type: none;
+    margin :0;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #8491c3;
+    color:  #000;
+    border-radius: 100vh;
+    width: 120px;
+    text-decoration: none;
+    
+}
+
+
+
+
+/*画像枠線～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
+
+img.i {
+    border-radius: 10px;
+    border: 2px solid #f3f3f3;
+}
+
+
+
+
+
