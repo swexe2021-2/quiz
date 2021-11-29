@@ -2,6 +2,8 @@
     width: 40%;
     margin-left: 27%;
     background-color: #fbfaf5;
+    font-size: 1.5em;
+    
 }
 
 .login {
@@ -22,6 +24,9 @@
 }*/
 
 /*問題文～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
+p {
+    line-height: 1.7em;
+}
 
 .quiz-block {
     position: relative;
@@ -73,8 +78,10 @@
 /*ボタンー～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
 
 .button {
+    line-height: 4em;
+    
     list-style-type: none;
-    margin :0;
+    margin-top :0;
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 7px;
@@ -125,6 +132,42 @@
     padding-bottom: 7px;
     background-color: #d3d3d3;
     color:  #000;
+    border-radius: 100vh;
+    width: 120px;
+    text-decoration: none;
+    
+}
+
+
+
+
+
+
+.button-s {
+
+    font-size: 0.9em;
+    list-style-type: none;
+    margin-top :0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #735e5e;
+    color:  #fbfaf5;
+    border-radius: 100vh;
+    width: 120px;
+    text-decoration: none;
+}
+
+.button-s:hover { /*ボタンの色　マウスが当たった時*/
+    list-style-type: none;
+    margin :0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #493232;
+    color:  #fbfaf5;
     border-radius: 100vh;
     width: 120px;
     text-decoration: none;

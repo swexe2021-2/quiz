@@ -4,7 +4,7 @@ class QuizsController < ApplicationController
   
   
   def index
-    @quizs = Question.page(params[:page]).per(2).order(:id)
+    @quizs = Question.page(params[:page]).per(5).order(:id)
   end
   
   def new
