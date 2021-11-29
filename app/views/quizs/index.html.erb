@@ -12,6 +12,7 @@
 <% end %>
 </p>
 
+
 <br>
 <% if session[:login_uid] %>
 <p>
@@ -60,6 +61,12 @@
     <%= link_to '表示', quiz_path(e), class:"button-1" %>
     
   </p>
+  
+
+  
 <% end %>
+
+
+<%= paginate(@quizs) %>
 
 

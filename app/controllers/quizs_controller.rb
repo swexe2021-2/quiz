@@ -1,6 +1,10 @@
 class QuizsController < ApplicationController
+  
+  
+  
+  
   def index
-    @quizs = Question.all
+    @quizs = Question.page(params[:page]).per(2).order(:id)
   end
   
   def new
@@ -58,4 +62,8 @@ class QuizsController < ApplicationController
     flash[:notice] = "ツイートを削除しました"
     redirect_to quizs_path
   end
+
+  
+
+  
 end
