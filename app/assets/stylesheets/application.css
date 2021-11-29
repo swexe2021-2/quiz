@@ -72,7 +72,6 @@
 
 /*ボタンー～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
 
-
 .button {
     list-style-type: none;
     margin :0;
@@ -157,8 +156,29 @@ img.i {
 
 
 
-/*～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
+/*ページネーション～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～*/
 
 
 
 
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination > li > a {
+  border: none;
+  color: #fbfaf5;
+  background-color: #735e5e;
+}
+.pagination > li > a:hover {
+  color: #fbfaf5;
+  background-color: #493232;
+}
+.pagination > .active > a {
+  color: #fbfaf5;
+  background-color: #493232;
+}
+.pagination > .active > a:hover {
+  background-color: #735e5e;
+  color: #fbfaf5;
+}
