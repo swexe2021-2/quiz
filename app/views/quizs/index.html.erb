@@ -20,7 +20,7 @@
   <%= form_tag 'quizs/search', method: :post do %>
     <%= label_tag 'キーワード' %>
     <%= text_field_tag :keyword %>
-    <%= submit_tag '検索'%>
+    <%= submit_tag '検索', class:"button-s"%>
   <% end %>
 <% else %>
   <h2>検索結果</h2>
