@@ -7,28 +7,33 @@
 </ul>
 <% end %>
 
+
+
 <%= form_for @quiz, url: {action: :create} do |f| %>
-  <p>
-    <%= f.label :title, 'タイトル' %> 
-    <%= f.text_field :title %><br>
-  </p>
-  <p>
-    <%= f.label :question, '問題' %> 
-    <%= f.text_field :question %><br>
-  </p>
-  <p>
-    <%= f.label :file, '画像' %>
-    <%= f.file_field :file %><br>
-  </p>
-  <p>
-    <%= f.label :answer, '答え' %> 
-    <%= f.text_field :answer %><br>
-  </p>
-  <p>
-    <%= f.label :comment, '解説' %> 
-    <%= f.text_field :comment %>
-  </p>
-  <p>
-    <%= f.submit '投稿する', class:"button-s" %>
-  </p>
+  <div class = "quiz-block">
+    <p>
+      <%= f.label :title, 'タイトル' %> 
+      <%= f.text_field :title %><br>
+    </p>
+    <p>
+      <%= f.label :question, '問題' %> 
+      <%= f.text_field :question %><br>
+    </p>
+    <p>
+      <%= f.label :file, '画像' %>
+      <%= f.file_field :file %><br>
+    </p>
+    <p>
+      <%= f.label :answer, '答え' %> 
+      <%= f.text_field :answer %><br>
+    </p>
+    <p>
+      <%= f.label :comment, '解説' %> 
+      <%= f.text_field :comment %>
+    </p>
+    <p>
+      <%= f.submit '投稿する', class:"button-s" %>
+    </p>
+  </div>
 <% end %>
+
