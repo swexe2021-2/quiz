@@ -36,13 +36,19 @@ class QuizsController < ApplicationController
     @quiz = Question.find(params[:id])
   end
   
+  def search
+    #@quizs = Question.where(title: params[:keyword])
+    @quizs = Question.where('title LIKE ? OR question LIKE ?', '%'+params[:keyword]+'%', '%'+params[:keyword]+'%')
+    render "index"
+  end
+  
   def answer
     @quiz = Question.find(params[:id])
     @ans = params[:pans]
     if @ans == @quiz.answer
-      flash[:notice] = "正解です"
+      flash.now[:notice] = "正解です"
     else
-      flash[:notice] = "不正解です"
+      flash.now[:notice] = "不正解です"
     end
   end
   
@@ -52,5 +58,4 @@ class QuizsController < ApplicationController
     flash[:notice] = "ツイートを削除しました"
     redirect_to quizs_path
   end
-  
 end

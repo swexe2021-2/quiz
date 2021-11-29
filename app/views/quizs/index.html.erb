@@ -16,11 +16,16 @@
 </p>
 <% end %>
 
+
+<h2>クイズ検索</h2>
+<%= form_tag 'quizs/search', method: :post do %>
+  <%= label_tag 'キーワード' %>
+  <%= text_field_tag :keyword %>
+  <%= submit_tag '検索'%>
+<% end %>
+
+
 <% @quizs.each do |e| %>
-
-
-
-
   <p class = "quiz-block">
     
     <%= "タイトル" %>
