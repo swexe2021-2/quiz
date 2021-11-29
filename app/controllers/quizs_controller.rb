@@ -37,9 +37,9 @@ class QuizsController < ApplicationController
   end
   
   def search
-    #@quizs = Question.where(title: params[:keyword])
+    @keyword = params[:keyword]
     @quizs = Question.where('title LIKE ? OR question LIKE ?', '%'+params[:keyword]+'%', '%'+params[:keyword]+'%')
-    render "index"
+    render 'index'
   end
   
   def answer
