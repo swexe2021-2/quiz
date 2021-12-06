@@ -13,11 +13,11 @@
   <div class = "quiz-block">
     <p>
       <%= f.label :title, 'タイトル' %> 
-      <%= f.text_field :title %><br>
+      <%= f.text_field :title, class:"quiz-block-cb" %><br>
     </p>
     <p>
       <%= f.label :question, '問題' %> 
-      <%= f.text_field :question %><br>
+      <%= f.text_field :question, class:"quiz-block-cb" %><br>
     </p>
     <p>
       <%= f.label :file, '画像' %>
@@ -25,11 +25,11 @@
     </p>
     <p>
       <%= f.label :answer, '答え' %> 
-      <%= f.text_field :answer %><br>
+      <%= f.text_field :answer, class:"quiz-block-cb" %><br>
     </p>
     <p>
       <%= f.label :comment, '解説' %> 
-      <%= f.text_field :comment %>
+      <%= f.text_field :comment, class:"quiz-block-cb" %>
     </p>
     <p>
       <%= f.submit '投稿する', class:"button-s" %>
