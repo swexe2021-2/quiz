@@ -24,7 +24,11 @@
   <% end %>
 <% else %>
   <h2>検索結果</h2>
-  <%= link_to 'Back', '/', class:"button" %>
+  <%= link_to 'Back', '/', class:"button" %>    
+  <% if @quizs == [] %>
+    <h3><strong><%= @keyword %></strong>
+    というキーワードのクイズはありませんでした</h3>
+  <% end %>
 <% end %>
 
 <% @quizs.each do |e| %>
@@ -65,5 +69,5 @@
 <% if @keyword == nil %>
   <%= paginate(@quizs) %>
 <% else %>
-  <%= link_to 'Back', '/', class:"button" %>
+  <%= link_to 'ホームに戻る', '/', class:"button" %>
 <% end %>

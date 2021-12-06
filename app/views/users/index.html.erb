@@ -8,19 +8,14 @@
 
 <% @users.each do |e| %>
   <p>
-    <%= "uid : " %>
+    <%= "ユーザー名： " %>
     <%= e.uid %>
-
     <%= link_to '削除', user_path(e), method: :delete, class:"button"  %>
-
-   
   </p>
 <% end %>
 
 <p>
   <%= link_to '新規登録', new_user_path, class:"button"  %>
-</p>
-<p>
-  <%= link_to 'ホームに戻る', "/" %>
+  <%= link_to 'ホームに戻る', "/", class:"button" %>
 </p>
 

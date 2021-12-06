@@ -1,6 +1,11 @@
 <P><strong>
   <% if flash[:notice] %>
-    <%= flash[:notice] %>
+    <% if flash[:notice] == "正解です" %>
+      <%= image_tag '正解.png'%>
+    <% end  %>
+    <% if flash[:notice] == "不正解です" %>
+      <%= image_tag '不正解.png'%>
+    <% end  %>
   <% end %>
 </strong></P>
 
