@@ -23,15 +23,15 @@
 </p>
 <p>
   <strong>問題</strong>
-  <%= @quiz.question %>
+  <%= simple_format(h(@quiz.question)) %>
 </p>
 <p>
   <strong>答え</strong>
-  <%= @quiz.answer %>
+  <%= simple_format(h(@quiz.answer)) %>
 </p>
 <p>
   <strong>解説</strong>
-  <%= @quiz.comment %>
+  <%= simple_format(h(@quiz.comment)) %>
 </p>
 
 </div>

@@ -7,7 +7,7 @@
   <p>
     <br>
     <strong>問題</strong>
-    <%= @quiz.question %>
+    <%= simple_format(h(@quiz.question)) %>
   </p>
 
 <%= form_for '/quizs/answer', method: :post do %>
