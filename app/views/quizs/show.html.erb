@@ -1,22 +1,22 @@
-
-<p>
-  <strong>タイトル</strong>
-  <%= @quiz.title %>
-</p>
-<%= image_tag "/get_image/#{@quiz.id}" %>
-<p>
-  <br>
-  <strong>問題</strong>
-  <%= @quiz.question %>
-</p>
-<p>
-  <strong>答え</strong>
-  <%= @quiz.answer %>
-</p>
-<p>
-  <strong>解説</strong>
-  <%= @quiz.comment %>
-</p>
+<div class = "quiz-block">
+  <p>
+    <strong>タイトル</strong>
+    <%= @quiz.title %>
+  </p>
+  <%= image_tag "/get_image/#{@quiz.id}" %>
+  <p>
+    <br>
+    <strong>問題</strong>
+    <%= @quiz.question %>
+  </p>
+  <p>
+    <strong>答え</strong>
+    <%= @quiz.answer %>
+  </p>
+  <p>
+    <strong>解説</strong>
+    <%= @quiz.comment %>
+  </p>
 
 <%= form_for '/quizs/answer', method: :post do %>
   <%= hidden_field_tag :title, @quiz.title %>
@@ -24,10 +24,12 @@
   <%= hidden_field_tag :answer, @quiz.answer %>
   <%= hidden_field_tag :comment, @quiz.comment %>
   <%= label_tag :pans, '回答' %>
-  <%= text_field_tag :pans %>
-  <%= submit_tag '回答する', class:"button-s" %>
+  <p class = "quiz-block-cb">
+    <%= text_field_tag :pans %>
+    <%= submit_tag '回答する', class:"button-s" %>
+  </p>
 <% end %> 
 <br>
-
+</div>
 
 <%= link_to 'Back', '/', class:"button" %>

@@ -1,4 +1,6 @@
-<P><strong>
+<div class = "quiz-block">
+
+<h3><strong>
   <% if flash[:notice] %>
     <% if flash[:notice] == "正解です" %>
       <%= image_tag '正解.png'%>
@@ -7,12 +9,14 @@
       <%= image_tag '不正解.png'%>
     <% end  %>
   <% end %>
-</strong></P>
+</strong></h3>
 
 <p>
   回答
   <%= @ans %>
 </p>
+
+
 
 <p>
   <strong>タイトル</strong>
@@ -31,6 +35,6 @@
   <%= @quiz.comment %>
 </p>
 
-
+</div>
 
 <%= link_to 'Back', '/', class:"button"  %>
