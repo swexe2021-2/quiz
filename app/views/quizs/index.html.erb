@@ -26,8 +26,8 @@
   <h2>検索結果</h2>
   <%= link_to 'Back', '/', class:"button" %>    
   <% if @quizs == [] %>
-    <h3><strong><%= @keyword %></strong>
-    というキーワードのクイズはありませんでした</h3>
+    <p><strong><%= @keyword %></strong>
+    というキーワードのクイズはありませんでした</p>
   <% end %>
 <% end %>
 
@@ -35,30 +35,20 @@
   <p class = "quiz-block">
     
   <font size="5px">
-    <%= "タイトル" %>
+    <%= "タイトル：" %>
     <%= e.title %>
   </font>
   <br>
-    
-    <%= "画像" %><br>
-    <%= image_tag "/get_image/#{e.id}", class:"i" %><br>
-    <br>
+  <br>
+  <%= image_tag "/get_image/#{e.id}", class:"i" %><br>
+   
 
-    <%= "問題文" %>
-    <%= e.question %><br>
-
-    <%= "答え" %>
-    <%= e.answer%><br>
-
-    <%= "コメント" %>
-    <%= e.comment%><br>
-    
     <br>
     <% if session[:login_uid] %>
         <%= link_to '削除', quiz_path(e), method: :delete, class:"button-1" %>
     <% end %>
     
-    <%= link_to '表示', quiz_path(e), class:"button-1" %>
+    <%= link_to '回答', quiz_path(e), class:"button-1" %>
     
   </p>
   

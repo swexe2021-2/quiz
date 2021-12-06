@@ -1,26 +1,25 @@
 <div class = "quiz-block">
-
+<p>
+  <strong>タイトル</strong>
+  <%= @quiz.title %>
+</p>
 <h3><strong>
   <% if flash[:notice] %>
     <% if flash[:notice] == "正解です" %>
-      <%= image_tag '正解.png'%>
+      <%= image_tag '正解.png', class:"i"%>
     <% end  %>
     <% if flash[:notice] == "不正解です" %>
-      <%= image_tag '不正解.png'%>
+      <%= image_tag '不正解.png', class:"i"%>
     <% end  %>
   <% end %>
 </strong></h3>
 
 <p>
-  回答
+  <strong>回答</strong>
   <%= @ans %>
 </p>
-
-
-
 <p>
-  <strong>タイトル</strong>
-  <%= @quiz.title %>
+<%= image_tag "/get_image/#{@quiz.id}", class:"i" %>
 </p>
 <p>
   <strong>問題</strong>

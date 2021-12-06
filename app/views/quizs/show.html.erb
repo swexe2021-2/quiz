@@ -3,19 +3,11 @@
     <strong>タイトル</strong>
     <%= @quiz.title %>
   </p>
-  <%= image_tag "/get_image/#{@quiz.id}" %>
+  <%= image_tag "/get_image/#{@quiz.id}", class:"i" %>
   <p>
     <br>
     <strong>問題</strong>
     <%= @quiz.question %>
-  </p>
-  <p>
-    <strong>答え</strong>
-    <%= @quiz.answer %>
-  </p>
-  <p>
-    <strong>解説</strong>
-    <%= @quiz.comment %>
   </p>
 
 <%= form_for '/quizs/answer', method: :post do %>
@@ -26,6 +18,7 @@
   <%= label_tag :pans, '回答' %>
   <p class = "quiz-block-cb">
     <%= text_field_tag :pans %>
+    <br><br>
     <%= submit_tag '回答する', class:"button-s" %>
   </p>
 <% end %> 
