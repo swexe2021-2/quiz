@@ -12,24 +12,24 @@
 <%= form_for @quiz, url: {action: :create} do |f| %>
   <div class = "quiz-block">
     <p>
-      <%= f.label :title, 'タイトル' %> 
-      <%= f.text_field :title, class:"quiz-block-cb" %><br>
+      <%= f.label :title, 'タイトル' %> <br>
+      <%= f.text_area :title, class:"quiz-block-cb" %><br>
     </p>
     <p>
-      <%= f.label :question, '問題' %> 
-      <%= f.text_field :question, class:"quiz-block-cb" %><br>
+      <%= f.label :question, '問題' %> <br>
+      <%= f.text_area :question, class:"quiz-block-cb" %><br>
     </p>
     <p>
       <%= f.label :file, '画像' %>
       <%= f.file_field :file %><br>
     </p>
     <p>
-      <%= f.label :answer, '答え' %> 
-      <%= f.text_field :answer, class:"quiz-block-cb" %><br>
+      <%= f.label :answer, '答え' %> <br>
+      <%= f.text_area :answer, class:"quiz-block-cb" %><br>
     </p>
     <p>
-      <%= f.label :comment, '解説' %> 
-      <%= f.text_field :comment, class:"quiz-block-cb" %>
+      <%= f.label :comment, '解説' %> <br>
+      <%= f.text_area :comment, class:"quiz-block-cb" %>
     </p>
     <p>
       <%= f.submit '投稿する', class:"button-s" %>

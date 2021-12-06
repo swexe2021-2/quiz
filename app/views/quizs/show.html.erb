@@ -17,7 +17,7 @@
   <%= hidden_field_tag :comment, @quiz.comment %>
   <%= label_tag :pans, '回答' %>
   <p class = "quiz-block-cb">
-    <%= text_field_tag :pans %>
+    <%= text_area_tag :pans %>
     <br><br>
     <%= submit_tag '回答する', class:"button-s" %>
   </p>

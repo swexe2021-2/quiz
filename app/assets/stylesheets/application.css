@@ -4,6 +4,12 @@
     background-color: #fbfaf5;
     font-size: 1.5em;
     
+    height: 80px;
+    
+background: radial-gradient(#fbfaf5 25%, transparent 0),
+              radial-gradient(#fbfaf5 50%, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
 }
 
 .login {
@@ -49,6 +55,9 @@ p {
 
 .quiz-block-cb {
     color: black;
+    resize: vertical;
+    width:70%;
+
 }
 
 
@@ -83,8 +92,6 @@ p {
 .title {
     font-size: 60px;
 }
-
-
 
 
 
